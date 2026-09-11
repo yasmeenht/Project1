@@ -1,0 +1,41 @@
+PORTFOLIO
+│
+├── Navbar
+│   ├── Logo: Y / YT / Yasmeen.
+│   ├── About
+│   ├── Experience
+│   ├── Skills
+│   ├── Projects
+│   └── Contact
+│
+├── Hero
+│   ├── "Hi, I'm Yasmeen."
+│   ├── Computer Science Graduate
+│   ├── Short introduction
+│   └── View Projects button
+│
+├── About
+│   └── Who I am + what I'm currently learning
+│
+├── Experience
+│   ├── Orange Coding Academy
+│   └── Other relevant experience
+│
+├── Qualifications
+│   └── BSc Computer Science — Yarmouk University
+│
+├── Skills
+│   ├── Technical
+│   └── Soft skills
+│
+├── Projects
+│   ├── Malaeb
+│   ├── YU Chatbot
+│   └── Future projects
+│
+├── References
+│
+└── Footer
+    ├── Email
+    ├── GitHub
+    └── LinkedIn

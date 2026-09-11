@@ -1,0 +1,23 @@
+:root{
+    --main: #faf7f2;
+    --primary: #d8aaa5;
+    --surface: #f3dfdcaa;
+    --lightSurface: #fffdfc;
+    --mainText: #342a28;
+    --secondaryText: #756865;
+    --accent: #a66f6b;
+    --border: #e7d5d1;
+}
+
+/**
+
+--main            overall page background 
+--primary         main brand/pink color 
+--surface         cards / larger colored areas 
+--lightSurface    lighter cards/navbar/etc. 
+--mainText        headings + normal important text 
+--secondaryText   subtitles / less important text 
+--accent          small emphasis / active states 
+--border          subtle borders 
+
+**/
