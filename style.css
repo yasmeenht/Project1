@@ -42,6 +42,50 @@
     .mobile-header{
         display: none;
     }
+    .first, .second, .third, .fourth{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 200px;
+    gap: 30px;
+    align-items: center;
+    padding: 30px 0px;
+    }
+    .second div:first-child,
+    .fourth div:first-child {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .second div:last-child,
+    .fourth div:last-child {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .containers{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .mycard{
+        flex: 1 1 0;
+    }
+    .qualifications{
+    border: 2px solid var(--border);
+    margin-top: 100px;
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1 1 0;
+    background: var(--surface);
+    margin-right: 30px;
+    margin-left: 30px;
+    }
+    .qualifications>div img{
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 50%;
+    padding: 0px;
+}
 
 
 }
@@ -77,26 +121,320 @@
     .nav-item:hover{
         font-weight: 500;
     }
+    .first, .second, .third, .fourth{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 200px;
+    gap: 30px;
+    align-items: center;
+    padding: 30px 0px;
+}
+.mycard{
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.qualifications{
+    border: 2px solid var(--border);
+    margin-top: 100px;
+    display: flex;
+    flex-flow: column nowrap;
+    flex: 1 1 0;
+    background: var(--surface);
+    margin-right: 30px;
+    margin-left: 30px;
+}
+.qualifications>div:nth-of-type(2) img{
+    width: 70%;
+    border-top-left-radius: 50%;
+    padding: 0px;
+    float: right;
+}
+.qualifications>div:nth-of-type(2){
+    width: 100%;
+    align-self: flex-end;
+
+}
 
     
 }
 
-.home{
+#home{
     margin: 300px 60px;
     justify-items: center;
     text-align: center;  
-
+    scroll-margin-top: 500px;
 }
-.home h3, h4{
+#home h3, #home h4{
     animation: fadeSlide 3s;
 }
-.home p{
+#home p{
     color: var(--secondaryText);
     animation: fadeSlide 3s;
     animation-delay: 1s;
     animation-fill-mode: backwards;
     
 }
+
+#aboutMe{
+    display: flex;
+    flex-flow: column wrap;
+    padding: 50px;
+    text-align: left;
+    scroll-margin-top: 100px;
+}
+.firstLetter {
+  font-size: 50px;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+#aboutMe h3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+}
+#aboutMe h5{
+    color: var(--accent);
+}
+
+
+
+
+#aboutMe p{
+    color: var(--secondaryText)
+
+}
+
+
+
+
+
+.first{
+    margin-top: 50px;
+}
+
+
+.ap{
+    width: 100%;
+    height: 100%;
+    transform: rotate(2deg);
+}
+
+.ap:hover{
+    transform: rotate(5deg) scale(1.04);
+}
+
+.mycard{
+    background-color: var(--border);
+    padding: 30px;
+    border-radius: 30px;
+
+}
+
+.mycard:hover{
+    transform: scale(1.03);
+    box-shadow: 1px 1px 10px;
+}
+
+
+
+.experience{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+}
+
+#experience{
+    scroll-margin-top: 300px;
+}
+
+#qualifications{
+    scroll-margin-top: 200px;
+}
+
+
+.qualifications > div:nth-child(1){
+    padding: 20px;
+    align-content: center;
+}
+
+.qualificationsSection{
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 30px;
+}
+
+.qualificationsSection > div p:nth-of-type(1){
+    font-weight: 200;
+    color: var(--accent)
+}
+
+
+
+.qualifications > div> h6, .qualifications h2{
+    color: var(--accent);
+}
+
+.qualifications > div h6:nth-of-type(1){
+    background-color: #CFC8C480;
+    width: fit-content;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.qualifications>div>p{
+    color: var(--secondaryText)
+}
+
+.skills{
+    text-align: center;
+}
+
+.skillsContainer{
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 15px;
+    color: var(--accent);
+    margin: 100px 30px;
+    gap: 30px;
+    background-color: #f3dfdc70;
+    border-radius: 30px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    width: 80%;
+    justify-self: center;
+}
+.skillsContainer div{
+    flex: 1 1 0;
+    margin-top: 20px;
+}
+
+.softSkills div{
+    border-right: 1px solid var(--accent);
+    padding-right: 30px;
+}
+.technicalSkills>div, .softSkills>div{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 20px;
+    
+}
+
+.technicalSkills>div div, .softSkills>div div{
+    background-color: #fffdfc90;
+    border: 1px solid #e7d5d1;
+    color: #756865;
+    border-radius: 30px;
+    align-content: center;
+    padding: 5px;
+
+}
+
+.technicalSkills>div div:hover, .softSkills>div div:hover{
+    transform: scale(1.09);
+    font-weight: 500;
+    background-color: #d8aaa540;
+    border-color: #d8aaa5;
+    color: #342a28;
+}
+
+.projects h3{
+    color: var(--accent);
+    text-align: center;
+    margin-bottom: 100px;
+}
+.projectspics img{
+    width: auto;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    backdrop-filter: blur(10px);
+    border: 2px solid #f3dfdc55;
+    box-shadow: 5px 5px 10px #f3dfdc55;
+
+}
+
+.projectspics{
+    position: relative;
+    overflow: hidden;
+
+}
+
+.projects{
+    margin-bottom: 100px;
+    scroll-margin-top: 150px;
+}
+
+.projects>div{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+
+.projectsTitles li{
+    border-bottom: 1px solid var(--border);
+}
+
+.projectsTitles li:hover{
+    padding-left: 10px;
+    color: var(--accent);
+    transition: all ease-in 0.3s;
+}
+
+.projectsTitles li::before{
+    content: "→";
+    opacity: 0;
+    margin-right: 8px;
+}
+
+.projectsTitles li:hover::before{
+    opacity: 1;
+
+}
+
+.projects:has(#auth li:hover) #authpic{
+    opacity: 1;
+    animation: fadeIn 0.5s;
+}
+
+.projects:has(#discoverMatch li:hover) #discorverMatchpic{
+    opacity: 1;
+    animation: fadeIn 0.5s;
+}
+
+.projects:has(#communityFeatures li:hover) #communityFeaturespic{
+    opacity: 1;
+    animation: fadeIn 0.5s;
+}
+
+.projects:has(#AdminPanel li:hover) #AdminPanelpic{
+    opacity: 1;
+    animation: fadeIn 0.5s;
+}
+
+#authpic{
+    opacity: 1;
+}
+
+.projectspics img{
+    pointer-events: none;
+}
+
+.liNumber{
+    font-size: x-large;
+    color: var(--accent);
+}
+
+#gradproj{
+    color: var(--secondaryText);
+}
+
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -118,3 +456,5 @@
         transform: translateY(0);
     }
 }
+
+
