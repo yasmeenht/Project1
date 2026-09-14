@@ -11,9 +11,20 @@
         top: 0px;
         position: fixed;
         background-color: var(--main);
+        z-index: 3;
 
 
     }
+    #logo{
+        width: 50px;
+        height: 50px;
+    }
+
+    #mypic{
+        margin-bottom: 10px;
+        box-shadow: 2px 2px 10px var(--accent);
+    }
+
     .navbar{
         border-radius: 30px;
         padding: 0;
@@ -44,11 +55,12 @@
     }
     .first, .second, .third, .fourth{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-top: 200px;
-    gap: 30px;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     align-items: center;
-    padding: 30px 0px;
+    width: 100%;
+    max-width: 850px;
+    margin-inline: auto;
+    gap: 60px;
     }
     .second div:first-child,
     .fourth div:first-child {
@@ -77,17 +89,110 @@
     flex-flow: row nowrap;
     flex: 1 1 0;
     background: var(--surface);
-    margin-right: 30px;
-    margin-left: 30px;
+    margin-right: 250px;
+    margin-left: 250px;
     }
+
+
     .qualifications>div img{
     width: 100%;
     height: 100%;
-    border-top-left-radius: 50%;
+    border-top-left-radius: 60%;
     padding: 0px;
 }
 
 
+.projects>div{
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0,1fr);
+    height: 65vh;
+    justify-content: center;
+}
+
+.projectsText{
+    align-self: center;
+    width: 50%;
+}
+.projectspics img{
+    width: auto;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    left: 65%;
+    border: 2px solid #f3dfdc55;
+    box-shadow: 10px 10px 10px #75686540;
+
+}
+
+.projectspics{
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+.projectsTitles li:hover{
+    padding-left: 10px;
+    color: var(--accent);
+    transition: all ease-in 0.3s;
+}
+
+.projectsTitles li::before{
+    content: "→";
+    opacity: 0;
+    margin-right: 8px;
+}
+
+.projectsTitles li:hover::before{
+    opacity: 1;
+
+}
+
+.projects:has(#auth li:hover) #authpic{
+    opacity: 1;
+    animation: fadeIn 0.5s;
+}
+
+.projects:has(#discoverMatch li:hover) #discoverMatchpic{
+    opacity: 1;
+    animation: fadeIn 0.5s;
+}
+
+.projects:has(#communityFeatures li:hover) #communityFeaturespic{
+    opacity: 1;
+    animation: fadeIn 0.5s;
+}
+
+.projects:has(#AdminPanel li:hover) #AdminPanelpic{
+    opacity: 1;
+    animation: fadeIn 0.5s;
+}
+
+#home,#experience, #qualifications{
+    scroll-margin-top: 250px;
+}
+#aboutMe{
+    scroll-margin-top: 100px;
+}
+#qualifications{
+    scroll-margin-top: 300px;
+}
+
+#skills{
+    scroll-margin-top: 150px;
+}
+#projects{
+    scroll-margin-top: 130px;
+}
+
+.experience{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+    margin-bottom: 150px;
+    margin-right: 130px;
+    margin-left: 130px;
+}
 }
 
 
@@ -96,10 +201,7 @@
     .desktop-header{
         display: none;
     }
-    #logo{
-        width: 10px;
-        height: 10px;
-    }
+
     body{
     background-color: var(--main);
     font-family: outfit;
@@ -115,8 +217,8 @@
         padding: 4px;
     }
     #logo{
-        width: 10px;
-        height: 10px;
+        width: 50px;
+        height: 50px;
     }
     .nav-item:hover{
         font-weight: 500;
@@ -156,32 +258,188 @@
 
 }
 
+.projects>div{
+    display: flex;
+    flex-flow: column nowrap;
+   
+}
+
+.projectspics img{
+    width: 50%;
+    position: absolute;
+    opacity: 0;
+    border: 2px solid #f3dfdc55;
+    box-shadow: 5px 5px 10px #f3dfdc55;
+}
+.projectspics{
+    position: relative;
+    overflow: visible;
+
+}
+.projectspics img:first-child {
+    position: relative;
+}
+
+.projectsText{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.projects:has(#auth #authrad:checked) #authpic{
+    opacity: 1;
+    animation: fadeIn 0.3s;
+}
+.projects:has(#discoverMatch #dmatchrad:checked) #discoverMatchpic{
+    opacity: 1;
+    animation: fadeIn 0.3s;
+}
+
+.projects:has(#communityFeatures #cfeaturesrad:checked) #communityFeaturespic{
+    opacity: 1;
+    animation: fadeIn 0.3s;
+}
     
+.projects:has(#AdminPanel #adpanelrad:checked) #AdminPanelpic{
+    opacity: 1;
+    animation: fadeIn 0.3s;
+}
+
+
+
+.projectsText{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+.projects:has(#auth #authrad:checked) #auth li{
+    padding-left: 10px;
+    color: var(--accent);
+    transition: all ease-in 0.3s;
+}
+.projects:has(#discoverMatch #dmatchrad:checked) #discoverMatch li{
+    padding-left: 10px;
+    color: var(--accent);
+    transition: all ease-in 0.3s;
+}
+
+.projects:has(#communityFeatures #cfeaturesrad:checked) #communityFeatures li{
+    padding-left: 10px;
+    color: var(--accent);
+    transition: all ease-in 0.3s;
+}
+    
+.projects:has(#AdminPanel #adpanelrad:checked) #AdminPanel li{
+    padding-left: 10px;
+    color: var(--accent);
+    transition: all ease-in 0.3s;
+}
+
+.projectsTitles input[type="radio"]:checked + label::before{
+    content: "→";
+    opacity: 1;
+    margin-right: 8px;
+}
+
+.experience{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+    margin: 0 20px;
+}
+
+.ap{
+    justify-self: center;
+}
+
+.projectspics img{
+    left: 25%;
+}
+
+#home {
+    scroll-margin-top: 200px;
+}
+#aboutMe{
+    scroll-margin-top: 50px;
+}
+
+#experience,#reference{
+    scroll-margin-top: 150px;
+}
+#qualifications{
+    scroll-margin-top: 225px;
+}
+
+#skills, #projects{
+    scroll-margin-top: 80px;
+}
+
+
+
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1200px) {
+    .qualifications{
+        margin: 0 20px;
+    }
+    .projectspics img {
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 100%;
+    object-fit: contain;
+}
+
+#experience{
+    scroll-margin-top: 200px;
+}
+
+.experience{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+    margin: 0 20px;
+}
+
+#qualifications{
+    scroll-margin-top: 200px;
+}
+
+#reference{
+    scroll-margin-top: 200px;
+}
+
 }
 
 #home{
-    margin: 300px 60px;
+    margin: 250px 30px 120px;
     justify-items: center;
     text-align: center;  
-    scroll-margin-top: 500px;
 }
-#home h3, #home h4{
+#home h3, #home h4, #mypic{
     animation: fadeSlide 3s;
 }
-#home p{
+#home p, .home i{
     color: var(--secondaryText);
     animation: fadeSlide 3s;
     animation-delay: 1s;
     animation-fill-mode: backwards;
     
 }
+.home img{
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+}
 
+i{
+    color: var(--primary);
+}
 #aboutMe{
     display: flex;
     flex-flow: column wrap;
     padding: 50px;
     text-align: left;
-    scroll-margin-top: 100px;
+    margin-bottom: 40px;
+
 }
 .firstLetter {
   font-size: 50px;
@@ -217,9 +475,10 @@
 
 
 .ap{
-    width: 100%;
-    height: 100%;
-    transform: rotate(2deg);
+    width: 80%;
+    height: auto;
+    display: block;
+    border-radius: 30px;
 }
 
 .ap:hover{
@@ -240,21 +499,12 @@
 
 
 
-.experience{
-    display: flex;
-    flex-flow: row wrap;
-    gap: 30px;
+
+
+.qualifications:hover{
+    box-shadow: 1px 1px 10px;
+        transform: scale(1.03);
 }
-
-#experience{
-    scroll-margin-top: 300px;
-}
-
-#qualifications{
-    scroll-margin-top: 200px;
-}
-
-
 .qualifications > div:nth-child(1){
     padding: 20px;
     align-content: center;
@@ -341,79 +591,23 @@
 }
 
 .projects h3{
-    color: var(--accent);
     text-align: center;
-    margin-bottom: 100px;
-}
-.projectspics img{
-    width: auto;
-    height: 100%;
-    position: absolute;
-    opacity: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    backdrop-filter: blur(10px);
-    border: 2px solid #f3dfdc55;
-    box-shadow: 5px 5px 10px #f3dfdc55;
-
+    margin-bottom: 40px;
 }
 
-.projectspics{
-    position: relative;
-    overflow: hidden;
-
+.myheaders{
+    margin-bottom: 20px;
+    text-align: center;
 }
+
 
 .projects{
     margin-bottom: 100px;
-    scroll-margin-top: 150px;
 }
 
-.projects>div{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    height: 100vh;
-}
 
 .projectsTitles li{
     border-bottom: 1px solid var(--border);
-}
-
-.projectsTitles li:hover{
-    padding-left: 10px;
-    color: var(--accent);
-    transition: all ease-in 0.3s;
-}
-
-.projectsTitles li::before{
-    content: "→";
-    opacity: 0;
-    margin-right: 8px;
-}
-
-.projectsTitles li:hover::before{
-    opacity: 1;
-
-}
-
-.projects:has(#auth li:hover) #authpic{
-    opacity: 1;
-    animation: fadeIn 0.5s;
-}
-
-.projects:has(#discoverMatch li:hover) #discorverMatchpic{
-    opacity: 1;
-    animation: fadeIn 0.5s;
-}
-
-.projects:has(#communityFeatures li:hover) #communityFeaturespic{
-    opacity: 1;
-    animation: fadeIn 0.5s;
-}
-
-.projects:has(#AdminPanel li:hover) #AdminPanelpic{
-    opacity: 1;
-    animation: fadeIn 0.5s;
 }
 
 #authpic{
@@ -433,7 +627,61 @@
     color: var(--secondaryText);
 }
 
+.projectsTitles input[type="radio"] {
+    display: none;
+}
 
+.reference{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.refcontainer{
+    background-color: var(--surface);
+    padding: 30px 80px;
+    margin: 5px;
+    border-radius: 40px;
+}
+
+.refcontainer:hover{
+    border: 1px solid #342a28;
+}
+
+.refcontainer .position, .refcontainer .organization{
+    color: var(--secondaryText);
+}
+
+.refcontainer .links{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.refcontainer .links a{
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.email,.linkedin{
+    background-color:#CFC8C480;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.email:hover,.linkedin:hover{
+    font-weight: 600;
+    background-color: #D9C2C2;
+    transform: scale(1.03);
+}
+
+footer{
+    background-color: var(--surface);
+}
 
 @keyframes fadeIn {
     from {
@@ -456,5 +704,3 @@
         transform: translateY(0);
     }
 }
-
-

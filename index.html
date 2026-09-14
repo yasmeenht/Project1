@@ -7,18 +7,20 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="colours.css">
     <link rel="stylesheet" href="style.css">
+
     <title>Document</title>
 </head>
 <body>
 
     <!--Desktop Header-->
     <div class="desktop-header">
-        <nav class="navbar bg-body-tertiary mt-4 mb-4">
+        <nav class="navbar mt-4 mb-4">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="Bootstrap" width="30" height="24">
+                <img src="logo.png" alt="Bootstrap" id="logo">
                 </a>
             </div>
         </nav>
@@ -42,7 +44,7 @@
                 <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Reference</a>
+                <a class="nav-link" href="#reference">Reference</a>
             </li>
         </ul>
     </div>
@@ -64,25 +66,25 @@
             <div class="offcanvas-body">
                 <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">About us</a>
+                    <a class="nav-link" href="#aboutMe">About us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Experience</a>
+                    <a class="nav-link" href="#experience">Experience</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Qualifications</a>
+                    <a class="nav-link" href="#qualifications">Qualifications</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Skills</a>
+                    <a class="nav-link" href="#skills">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Projects</a>
+                    <a class="nav-link" href="#projects">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Reference</a>
+                    <a class="nav-link" href="#reference">Reference</a>
                 </li>
                 </ul>
             </div>
@@ -93,14 +95,41 @@
 
 
     <!--Home-->
-    <div class="containers" id="home">
+    <div class="home containers" id="home">
+        <img src="me.jpg" id="mypic">
         <h3>Hi, I'm Yasmeen</h3>
         <h4>Computer Science Graduate & Future Full-Stack Developer </h4>
         <p>I’m currently developing my skills in full-stack development, combining problem-solving, technology, and creativity to turn ideas into thoughtful digital experiences. I enjoy learning through hands-on projects and continuously challenging myself to grow as a developer.</p>
+      <!-- Linkedin -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="https://www.linkedin.com/in/yasmeentalafha"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="bi bi-linkedin"></i
+      ></a>
+      <!-- Github -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="https://github.com/yasmeenht"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="bi bi-github"></i
+      ></a>
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="mailto: yasmeentalafha82@gmail.com"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="bi bi-envelope"></i
+      ></a>
     </div>
 
     <div class="containers" id="aboutMe">
-        <h3><span class="firstLetter">A</span>bout Me</h3>
+        <h3 class="myheaders"><span class="firstLetter">A</span>bout Me</h3>
         <div class="first">
             <div>
                 <h5>01</h5>
@@ -108,7 +137,7 @@
                 <p>My journey into technology began with studying Computer Science at Yarmouk University. What first started as learning how computers and programs work gradually became an interest in how ideas can be transformed into things people can actually interact with. Along the way, I found myself enjoying the combination of logic, creativity, and problem solving that comes with development.</p>          
             </div>
             <div>
-                <img class="ap" src="test.png">
+                <img class="ap" src="yu.png">
             </div>
         </div>
     
@@ -137,21 +166,12 @@
             </div>
         </div>
 
-
-        <div class="fourth">
-            <div>
-                <h5>04</h5>
-                <h4>Beyond the screen</h4>
-                <p>Outside of technology, I'm naturally curious about how people and ideas evolve. I enjoy psychology, history, languages, and design, and I often find myself interested in the reasoning behind things rather than just the final result. That curiosity also shapes how I approach development: I care about making things that are thoughtful, clear, and enjoyable to use.</p>
-            </div>
-            <div>
-                <img class="ap" src="fourth.png">
-            </div>
-        </div>
     </div>
 
     <!--Experience-->
+    <h3 class="myheaders"><span class="firstLetter">E</span>xperience</h3>
     <div class="experience containers" id="experience">
+        
         <div class="oca mycard">
             <h4>Orange Coding Academy</h4>
             <h5>Full-Stack Development Trainee</h5>
@@ -168,8 +188,9 @@
     </div> 
 
     <!--Qualifications-->
-    <h4>Qualifications</h4>
+    <h3 class="myheaders"><span class="firstLetter">Q</span>ualifications</h3>
     <div class="qualifications containers" id="qualifications">
+        
         <div>
             <h6>Education</h6>
             <h2>2026</h2>
@@ -195,7 +216,7 @@
     </div>
 
     <div class="skills containers mt-4" id="skills">
-        <h3>Skills</h3>
+        <h3 class="myheaders"><span class="firstLetter">S</span>kills</h3>
         <div class="skillsContainer">
             
             <div class="softSkills">
@@ -222,28 +243,123 @@
     </div>
 
     <div class="projects" id="projects">
-        <h3>Projects</h3>
+        <h3 class="myheaders"><span class="firstLetter">P</span>rojects</h3>  
         <div>
             <div class="projectspics">
                 <img src="authentication.jpg" alt="Authentication" id="authpic">
-                <img src="discorverMatch.jpg" alt="discoverMatch" id="discorverMatchpic">
+                <img src="discorverMatch.jpg" alt="discoverMatch" id="discoverMatchpic">
                 <img src="Community Features.jpg" alt="communityFeatures" id="communityFeaturespic">
                 <img src="AdminPanel.jpg" alt="AdminPanel" id="AdminPanelpic">
             </div>
-            <div>
+            <div class="projectsText">
                 <div><span class="liNumber">01&emsp;MALAEB</span><br><span id="gradproj">Graduation Project</span></div>
                 <br>
                 <div class="projectsTitles">
                     <ul style="list-style-type: none;">
-                        <div id="auth"><li>Authentication</li></div>
-                        <div id="discoverMatch"><li>Match Discovery & Booking</li></div>
-                        <div id="communityFeatures"><li>Community Features</li></div>
-                        <div id="AdminPanel"><li>Admin Panel</li></div>
+                        <div id="auth">
+                            <li>
+                                <input type="radio" name="project" id="authrad">
+                                <label for="authrad">Authentication</label>
+                            </li>
+                        </div>
+
+                        <div id="discoverMatch">
+                            <li>
+                                <input type="radio" name="project" id="dmatchrad">
+                                <label for="dmatchrad">Match Discovery & Booking</label>
+                            </li>
+                        </div>
+
+                        <div id="communityFeatures">
+                            <li>
+                                <input type="radio" name="project" id="cfeaturesrad">
+                                <label for="cfeaturesrad">Community Features</label>
+                            </li>
+                        </div>
+
+                        <div id="AdminPanel">
+                            <li>
+                                <input type="radio" name="project" id="adpanelrad">
+                                <label for="adpanelrad">Admin Panel</label>
+                            </li>
+                        </div>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+
+    <h3 class="myheaders"><span class="firstLetter">R</span>eferences</h3>
+    <div class="reference containers" id="reference">
+        
+        <div class="refcontainer">
+            <div class="name"><h5>Anfal Dherat</h5></div>
+            <div class="position">Coding Academy Trainer/Coach</div>
+            <div class="organization">Orange Conding Academy</div>
+            <div class="links">
+                <div class="email" >
+                    <a href="mailto:gt.anfal.daharat@orange.com">Email</a>
+                </div>
+                <div class="linkedin" >
+                    <a href="https://www.linkedin.com/in/anfal-dherat/">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="refcontainer">
+            <div class="name"><h5>Batool Al-Dalki</h5></div>
+            <div class="position">Coding Academy Trainer/Coach</div>
+            <div class="organization">Orange Conding Academy</div>
+            <div class="links">
+                <div class="email" >
+                    <a href="mailto:gt.batool.aldalki@orange.com">Email</a>
+                </div>
+                <div class="linkedin" >
+                    <a href="https://www.linkedin.com/in/batool-walid-b33894228?utm_source=share_via&utm_content=profile&utm_medium=member_ios">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+<footer class="text-center">
+  <!-- Grid container -->
+  <div class="container pt-4">
+    <!-- Section: Social media -->
+    <section class="mb-1">
+      <!-- Linkedin -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="https://www.linkedin.com/in/yasmeentalafha"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="bi bi-linkedin"></i
+      ></a>
+      <!-- Github -->
+      <a
+        data-mdb-ripple-init
+        class="btn btn-link btn-floating btn-lg text-body m-1"
+        href="https://github.com/yasmeenht"
+        role="button"
+        data-mdb-ripple-color="dark"
+        ><i class="bi bi-github"></i
+      ></a>
+    </section>
+  </div>
+  <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center pb-3" >
+        ©:
+        <a class="text-body" href="https://mdbootstrap.com/"> Yasmeen Talafha </a>
+    </div>
+  <!-- Copyright -->
+    </footer>
+
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
