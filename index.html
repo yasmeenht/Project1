@@ -17,14 +17,14 @@
 
     <!--Desktop Header-->
     <div class="desktop-header">
-        <nav class="navbar mt-4 mb-4">
+        <nav class="navbar">
             <div class="container">
                 <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="Bootstrap" id="logo">
+                <img src="img/logo.png" alt="Bootstrap" id="logo">
                 </a>
             </div>
         </nav>
-        <ul class="nav justify-content-center mt-4 mb-4">
+        <ul class="nav justify-content-center">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#home">Home</a>
             </li>
@@ -44,7 +44,7 @@
                 <a class="nav-link" href="#projects">Projects</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#reference">Reference</a>
+                <a class="nav-link" href="#reference">References</a>
             </li>
         </ul>
     </div>
@@ -53,13 +53,13 @@
     <div class="mobile-header mt-3">
         <nav class="navbar bg-body-tertiary fixed-top">
         <div class="container-fluid">
-            <img src="logo.png" alt="logo" id="logo">
+            <img src="img/logo.png" alt="logo" id="logo">
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
             <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
-                <img src="logo.png" alt="logo" id="logo">
+                <img src="img/logo.png" alt="logo" id="logo">
                 <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Yasmeen Talafha</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
@@ -69,7 +69,7 @@
                     <a class="nav-link active" aria-current="page" href="#home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#aboutMe">About us</a>
+                    <a class="nav-link" href="#aboutMe">About me</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#experience">Experience</a>
@@ -96,36 +96,46 @@
 
     <!--Home-->
     <div class="home containers" id="home">
-        <img src="me.jpg" id="mypic">
-        <h3>Hi, I'm Yasmeen</h3>
-        <h4>Computer Science Graduate & Future Full-Stack Developer </h4>
-        <p>I’m currently developing my skills in full-stack development, combining problem-solving, technology, and creativity to turn ideas into thoughtful digital experiences. I enjoy learning through hands-on projects and continuously challenging myself to grow as a developer.</p>
-      <!-- Linkedin -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="https://www.linkedin.com/in/yasmeentalafha"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="bi bi-linkedin"></i
-      ></a>
-      <!-- Github -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="https://github.com/yasmeenht"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="bi bi-github"></i
-      ></a>
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="mailto: yasmeentalafha82@gmail.com"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="bi bi-envelope"></i
-      ></a>
+        <div class="homepic">
+            <img src="img/me.jpg" id="mypic">
+        </div>
+        <div class="homeText">
+            <h3>Hi, I'm Yasmeen</h3>
+            <h4>Computer Science Graduate & Future Full-Stack Developer </h4>
+            <p>I’m currently developing my skills in full-stack development, combining problem-solving, technology, and creativity to turn ideas into thoughtful digital experiences. I enjoy learning through hands-on projects and continuously challenging myself to grow as a developer.</p>
+
+            <!-- Linkedin -->
+        <a
+            data-mdb-ripple-init
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="https://www.linkedin.com/in/yasmeentalafha"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="bi bi-linkedin homeCTA" title="LinkedIn"></i
+        ></a>
+        <!-- Github -->
+        <a
+            data-mdb-ripple-init
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="https://github.com/yasmeenht"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="bi bi-github homeCTA" title="Github"></i
+        ></a>
+        <a
+            data-mdb-ripple-init
+            class="btn btn-link btn-floating btn-lg text-body m-1"
+            href="mailto: yasmeentalafha82@gmail.com"
+            role="button"
+            data-mdb-ripple-color="dark"
+            ><i class="bi bi-envelope homeCTA" title="Email"></i
+        ></a>
+
+
+        <div class="cta">
+            <a href="https://wa.me/962770069283">Lets Talk!</a>
+        </div>
+        </div>
     </div>
 
     <div class="containers" id="aboutMe">
@@ -137,7 +147,7 @@
                 <p>My journey into technology began with studying Computer Science at Yarmouk University. What first started as learning how computers and programs work gradually became an interest in how ideas can be transformed into things people can actually interact with. Along the way, I found myself enjoying the combination of logic, creativity, and problem solving that comes with development.</p>          
             </div>
             <div>
-                <img class="ap" src="yu.png">
+                <img class="ap" src="img/finalYu.png">
             </div>
         </div>
     
@@ -150,7 +160,7 @@
                 <p>Computer Science introduced me to many different areas of technology, but I wanted to become more confident in actually building things from the ground up. That curiosity eventually pulled me toward full-stack development, where I could understand not only what users see, but also what happens behind the scenes to make everything work together.</p>
             </div>
             <div>
-                <img class="ap" src="second.png">
+                <img class="ap" src="img/second.png">
             </div>
         </div>
 
@@ -162,7 +172,7 @@
                 <p>For me, becoming a developer isn't just about learning another language or framework. I'm learning how to approach unfamiliar problems, break them into smaller pieces, experiment, make mistakes, and figure out why something works instead of simply making it work. I'm still developing that confidence, but that's also one of the parts of this journey I value most.</p>
             </div>
             <div>
-                <img class="ap" src="third.png">
+                <img class="ap" src="img/third.png">
             </div>
         </div>
 
@@ -211,7 +221,7 @@
             <p>Graduated with a strong foundation in computer science, including software development, algorithms, data structures, databases, and problem solving.</p>
         </div>
         <div>
-            <img src="finalYu">
+            <img src="img/finalYu">
         </div>
     </div>
 
@@ -242,14 +252,15 @@
         </div>
     </div>
 
+
     <div class="projects" id="projects">
         <h3 class="myheaders"><span class="firstLetter">P</span>rojects</h3>  
         <div>
             <div class="projectspics">
-                <img src="authentication.jpg" alt="Authentication" id="authpic">
-                <img src="discorverMatch.jpg" alt="discoverMatch" id="discoverMatchpic">
-                <img src="Community Features.jpg" alt="communityFeatures" id="communityFeaturespic">
-                <img src="AdminPanel.jpg" alt="AdminPanel" id="AdminPanelpic">
+                <img src="img/authentication.jpg" alt="Authentication" id="authpic">
+                <img src="img/discorverMatch.jpg" alt="discoverMatch" id="discoverMatchpic">
+                <img src="img/Community Features.jpg" alt="communityFeatures" id="communityFeaturespic">
+                <img src="img/AdminPanel.jpg" alt="AdminPanel" id="AdminPanelpic">
             </div>
             <div class="projectsText">
                 <div><span class="liNumber">01&emsp;MALAEB</span><br><span id="gradproj">Graduation Project</span></div>
@@ -297,12 +308,34 @@
             <div class="position">Coding Academy Trainer/Coach</div>
             <div class="organization">Orange Conding Academy</div>
             <div class="links">
-                <div class="email" >
-                    <a href="mailto:gt.anfal.daharat@orange.com">Email</a>
-                </div>
+
+
                 <div class="linkedin" >
-                    <a href="https://www.linkedin.com/in/anfal-dherat/">LinkedIn</a>
+                        <a
+                data-mdb-ripple-init
+                class="btn btn-link btn-floating btn-lg text-body m-1"
+                href="https://www.linkedin.com/in/anfal-dherat/"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="bi bi-linkedin refCTA" title="LinkedIn"></i
+                    ></a>
                 </div>
+
+                <div class="email" >
+                    
+                    <a
+                        data-mdb-ripple-init
+                        class="btn btn-link btn-floating btn-lg text-body m-1"
+                        href="mailto: gt.anfal.daharat@orange.com"
+                        role="button"
+                        data-mdb-ripple-color="dark"
+                        ><i class="bi bi-envelope refCTA" title="Email"></i
+                    ></a>
+                </div>
+
+
+
+
             </div>
         </div>
 
@@ -312,10 +345,24 @@
             <div class="organization">Orange Conding Academy</div>
             <div class="links">
                 <div class="email" >
-                    <a href="mailto:gt.batool.aldalki@orange.com">Email</a>
+                    <a
+                data-mdb-ripple-init
+                class="btn btn-link btn-floating btn-lg text-body m-1"
+                href="https://www.linkedin.com/in/batool-walid-b33894228?utm_source=share_via&utm_content=profile&utm_medium=member_ios"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="bi bi-linkedin refCTA" title="LinkedIn"></i
+                    ></a>
                 </div>
                 <div class="linkedin" >
-                    <a href="https://www.linkedin.com/in/batool-walid-b33894228?utm_source=share_via&utm_content=profile&utm_medium=member_ios">LinkedIn</a>
+                    <a
+                        data-mdb-ripple-init
+                        class="btn btn-link btn-floating btn-lg text-body m-1"
+                        href="mailto:gt.batool.aldalki@orange.com"
+                        role="button"
+                        data-mdb-ripple-color="dark"
+                        ><i class="bi bi-envelope refCTA" title="Email"></i
+                    ></a>
                 </div>
             </div>
         </div>
@@ -328,35 +375,47 @@
   <div class="container pt-4">
     <!-- Section: Social media -->
     <section class="mb-1">
-      <!-- Linkedin -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="https://www.linkedin.com/in/yasmeentalafha"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="bi bi-linkedin"></i
-      ></a>
-      <!-- Github -->
-      <a
-        data-mdb-ripple-init
-        class="btn btn-link btn-floating btn-lg text-body m-1"
-        href="https://github.com/yasmeenht"
-        role="button"
-        data-mdb-ripple-color="dark"
-        ><i class="bi bi-github"></i
-      ></a>
+        <div>
+            <img src="img/logo.png" style="width: 50px; height: 50px;">
+        </div>
+
+
+        <div class="text-center pb-3">
+        ©:
+        <a class="text-body" href="https://mdbootstrap.com/" style="text-decoration: none; color: var(--mainText)"> Yasmeen Talafha </a>
+        </div>
+
+        <div>
+            <!-- Linkedin -->
+            <a
+                data-mdb-ripple-init
+                class="btn btn-link btn-floating btn-lg text-body m-1"
+                href="https://www.linkedin.com/in/yasmeentalafha"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="bi bi-linkedin" title="LinkedIn"></i
+            ></a>
+            <!-- Github -->
+            <a
+                data-mdb-ripple-init
+                class="btn btn-link btn-floating btn-lg text-body m-1"
+                href="https://github.com/yasmeenht"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="bi bi-github" title="Github"></i
+            ></a>
+            <a
+                data-mdb-ripple-init
+                class="btn btn-link btn-floating btn-lg text-body m-1"
+                href="https://github.com/yasmeenht"
+                role="button"
+                data-mdb-ripple-color="dark"
+                ><i class="bi bi-envelope" title="Email"></i
+            ></a>
+        </div>
     </section>
   </div>
-  <!-- Grid container -->
-
-    <!-- Copyright -->
-    <div class="text-center pb-3" >
-        ©:
-        <a class="text-body" href="https://mdbootstrap.com/"> Yasmeen Talafha </a>
-    </div>
-  <!-- Copyright -->
-    </footer>
+</footer>
 
 
 

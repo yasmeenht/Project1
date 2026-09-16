@@ -5,15 +5,38 @@
     }
     .desktop-header{
         display: grid;
-        grid-template-columns: 1fr auto 1fr;
+        grid-template-columns: auto minmax(0, 1fr);
         width: 100vw;
-        padding: 10px; 
         top: 0px;
         position: fixed;
-        background-color: var(--main);
+        background-color: var(--surface);
         z-index: 3;
+        backdrop-filter: blur(10px);
+        
+    }
 
+    .home{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 30px;
+    }
 
+    .home img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+
+    #home{
+    margin: 270px 30px 220px;
+    }
+
+    .homeText{
+    text-align: center;
+    width: 60%;
+    align-self: center;
     }
     #logo{
         width: 50px;
@@ -22,24 +45,13 @@
 
     #mypic{
         margin-bottom: 10px;
-        box-shadow: 2px 2px 10px var(--accent);
+        box-shadow: 10px 10px 30px 5px #a66f6b80;
     }
 
-    .navbar{
-        border-radius: 30px;
-        padding: 0;
-        width: fit-content;
-    }
     .nav{
         align-content: center;
-        border-radius: 30px;   
-        background-color: var(--surface);
-        border-radius: 30px;
-        justify-self: center;
         padding: 5px;
-        border: 1px solid var(--mainText);
-
-    }
+   }
     .nav-link{
         color: var(--mainText);
     }
@@ -84,13 +96,13 @@
     }
     .qualifications{
     border: 2px solid var(--border);
-    margin-top: 100px;
     display: flex;
     flex-flow: row nowrap;
     flex: 1 1 0;
     background: var(--surface);
     margin-right: 250px;
     margin-left: 250px;
+    margin-bottom: 100px;
     }
 
 
@@ -189,7 +201,8 @@
     display: flex;
     flex-flow: row wrap;
     gap: 30px;
-    margin-bottom: 150px;
+    margin-top: 50px;
+    margin-bottom: 100px;
     margin-right: 130px;
     margin-left: 130px;
 }
@@ -205,6 +218,34 @@
     body{
     background-color: var(--main);
     font-family: outfit;
+    }
+
+    .home{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    gap: 30px;
+    }
+
+    #home{
+        margin: 200px 30px 220px;
+    }
+
+    .homepic{
+        align-self: center;
+    }
+
+    .home img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    }
+
+    .homeText{
+    text-align: center;
+    width: 100%;
+    align-self: center;
     }
     .container-fluid{
         background-color: var(--surface);
@@ -238,7 +279,6 @@
 
 .qualifications{
     border: 2px solid var(--border);
-    margin-top: 100px;
     display: flex;
     flex-flow: column nowrap;
     flex: 1 1 0;
@@ -408,31 +448,49 @@
 
 }
 
-#home{
-    margin: 250px 30px 120px;
-    justify-items: center;
-    text-align: center;  
-}
+
+
+
+
+
+
+
+
 #home h3, #home h4, #mypic{
     animation: fadeSlide 3s;
 }
-#home p, .home i{
+#home p, .homeCTA, .cta{
     color: var(--secondaryText);
     animation: fadeSlide 3s;
     animation-delay: 1s;
     animation-fill-mode: backwards;
     
 }
-.home img{
-    width: 110px;
-    height: 110px;
-    border-radius: 50%;
-    object-fit: cover;
+
+.bi{
+    color: var(--cta);
 }
 
-i{
-    color: var(--primary);
+.cta a{
+    color: var(--main);
+    text-decoration: none;
 }
+
+.cta{
+    justify-self: center;
+    background-color: var(--cta);
+    padding: 5px 10px;
+    width: fit-content;
+    border-radius: 30px;
+    margin-top: 4px;
+}
+
+.cta:hover{
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 6px 18px #C13B7250;
+    filter: brightness(0.92);
+}
+
 #aboutMe{
     display: flex;
     flex-flow: column wrap;
@@ -547,7 +605,7 @@ i{
     flex-flow: row wrap;
     font-size: 15px;
     color: var(--accent);
-    margin: 100px 30px;
+    margin: 0px 30px 150px 30px;
     gap: 30px;
     background-color: #f3dfdc70;
     border-radius: 30px;
@@ -569,7 +627,7 @@ i{
     display: flex;
     flex-flow: row wrap;
     gap: 20px;
-    
+    justify-content: center;
 }
 
 .technicalSkills>div div, .softSkills>div div{
@@ -578,7 +636,9 @@ i{
     color: #756865;
     border-radius: 30px;
     align-content: center;
-    padding: 5px;
+    justify-items: center;
+    padding: 10px 10px;
+    max-width: fit-content;
 
 }
 
@@ -667,13 +727,13 @@ i{
     text-decoration: none;
 }
 
-.email,.linkedin{
+.refCTA{
     background-color:#CFC8C480;
     padding: 10px;
     border-radius: 20px;
 }
 
-.email:hover,.linkedin:hover{
+.refCTA:hover{
     font-weight: 600;
     background-color: #D9C2C2;
     transform: scale(1.03);
@@ -703,4 +763,12 @@ footer{
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+footer section{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
 }
